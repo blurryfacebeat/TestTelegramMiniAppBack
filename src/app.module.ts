@@ -6,6 +6,7 @@ import { setTelegramConfig } from './telegram/telegram.config';
 @Module({
   imports: [
     TelegramModule,
+    ConfigModule.forRoot(),
     TelegramModule.forRootAsync({
       imports: [ConfigModule],
       inject: [ConfigService],
